@@ -1,0 +1,25 @@
+<!-- <form action="/restaurants" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="name">
+  <input type="text" name="address">
+  <input type="submit">
+</form> -->
+<!-- Clicking on the submit button, the browser will make the following request:
+ -->
+<!-- Header: POST /restaurants
+Body: name=name_you_typed&address=address_you_typed -->
+<div class="container">
+  <div class="ask">
+    <h3>You said:</h3>
+    <p><%= params[:query] %></p>
+  </div>
+
+  <div class="ans">
+    <h3>Coach says:</h3>
+    <p><%= @answer %></p>
+  </div>
+
+  <div class="another">
+    <%= link_to "Ask him another question", coaching_ask_path %>
+  </div>
+</div>
